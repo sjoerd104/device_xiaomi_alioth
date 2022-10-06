@@ -30,31 +30,12 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
-
-<<<<<<< HEAD
-# Shipping API level
-=======
-PRODUCT_PACKAGES += \
-    SettingsProviderM2012K11AC \
-    SettingsProviderM2012K11AG \
-    SettingsProviderM2012K11AI
-
+	
 PRODUCT_PACKAGES += \
     AliothFrameworks \
     AliothSystemUI
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Screen density
-TARGET_SCREEN_DENSITY := 420
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
-
->>>>>>> 5b0573c (alioth: overlay: Configure device layout specific overlays)
+# Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Shims
@@ -65,11 +46,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-<<<<<<< HEAD
-=======
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
->>>>>>> 5b0573c (alioth: overlay: Configure device layout specific overlays)
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/alioth/alioth-vendor.mk)
