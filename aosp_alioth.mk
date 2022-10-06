@@ -12,10 +12,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common VoidUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Inherit Google Pixel Updatable APEX
-TARGET_SHIP_PREBUILT_APEX := true
-$(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
-
 # Inherit Google Pixel Carrier Settings
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 
