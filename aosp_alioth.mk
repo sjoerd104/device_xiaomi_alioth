@@ -16,6 +16,9 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_SHIP_PREBUILT_APEX := true
 $(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 
+# Inherit Google Pixel Carrier Settings
+TARGET_INCLUDE_CARRIER_SETTINGS := true
+
 # Device Specific Flags
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_BOOT_ANIMATION_RES := 1440
